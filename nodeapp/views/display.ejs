@@ -1,0 +1,38 @@
+<html>
+    <style>
+        table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+    </style>
+    <body>
+        <center>
+        <h1>Data inserted successfully!!</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>State</th>
+                <th>Date</th>
+                <th>Samples</th>
+                <th>Deaths</th>
+                <th>Positives</th>
+                <th>Negatives</th>
+                <th>Discharge</th>
+            </tr>
+        </thead>
+        <tr>
+            <%data.forEach(entry=>{%>
+                <td><%=entry.s_name%></td>
+                <td><%=entry.date%></td>
+                <td><%=entry.samples%></td>
+                <td><%=entry.deaths%></td>
+                <td><%=entry.positive%></td>
+                <td><%=entry.neggative%></td>
+                <td><%=entry.discharge%></td>
+        </tr>
+        <%})%>
+        </table>
+    </center>
+    </body>
+
+</html>
